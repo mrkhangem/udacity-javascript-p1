@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dinographic</title>
+  <link href="https://fonts.googleapis.com/css?family=Frijole|Open+Sans|Oswald&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Natural History Museum</h1>
+    <h2>Dinosaurs</h2>
+    <h3>How do you compare?</h3>
+  </header>
+
+  <form id="dino-compare">
+    <div class="form-container">
+      <label for="name">Name:</label>
+      <input id="name" class="form-field__full" type="text" name="name">
+      
+      <label for="unit">Unit:</label>
+      <select id="unit" class="form-field__full" name="unit">
+        <option>Emperial</option>
+        <option>Metric</option>
+      </select>
+      
+      <label for="big-height">Height:</label>
+      <div>
+        <input id="big-height" class="form-field__short" type="number" name="big-height">
+        <span>Feet</span>
+        <input id="small-height" class="form-field__short" type="number" name="small-height">
+        <span>Inches</span>
+      </div>
+      <p class="error-message" id="error-height"></p>
+      
+      <label for="weight">Weight:</label>
+      <div>
+        <input id="weight" class="form-field__full" type="number" name="weight">
+        <span>lbs</span>
+      </div>
+      <p class="error-message" id="error-weight"></p>
+      
+      <label for="diet">Diet:</label>
+      <select id="diet" class="form-field__full" name="diet">
+        <option>Herbavor</option>
+        <option>Omnivor</option>
+        <option>Carnivor</option>
+      </select>
+      
+      <div id="btn">Compare Me!</div>
+    </div>
+  </form>
+
+  <main id="grid"></main>
+
+  <footer>
+    <p class="fine-print">
+      Data Sourced from <a href="https://www.wikipedia.org/">Wikipedia.org</a>, all numbers are approximations.
+    </p>
+  </footer>
+</body>
+</html>
